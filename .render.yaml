@@ -2,6 +2,6 @@ services:
   - type: web
     name: mark-extractor-api
     env: python
-    buildCommand: "./build.sh && pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    buildCommand: ./build.sh
+startCommand: python app.py
     autoDeploy: true
