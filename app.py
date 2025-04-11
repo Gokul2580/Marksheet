@@ -4,9 +4,9 @@ import pytesseract
 import numpy as np
 import pandas as pd
 import base64
-
+from flask_cors import CORS  
 app = Flask(__name__)
-
+CORS(app) 
 def parse_mark(val):
     try:
         return float(val.replace('½', '.5').replace('¼', '.25').replace('¾', '.75')
